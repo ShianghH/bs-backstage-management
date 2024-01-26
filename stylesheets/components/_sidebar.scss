@@ -1,0 +1,74 @@
+$sidebar-width: 280px;
+
+//行動版(預設)
+.sidebar {
+    width: $sidebar-width;
+    margin-left: -$sidebar-width;
+    transition: margin-left .25s;
+    position: fixed;
+    top: 0;
+    .sidebar-link{
+        color: $dark;
+        font-weight: bold;
+        display: block;
+        text-decoration: none;
+        padding-top: 0.875rem;
+        padding-bottom: 0.875rem;
+        &:hover{
+            background-color: rgba($danger, 0.16);
+        }
+    }
+    .sidebar-link.active {
+        position: relative;
+        color: $light !important;
+        background-color: rgb(237, 122, 122);
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 2px;
+            height: 100%;
+            width: 3px;
+            background: $danger;
+        }
+    }
+}   
+.main{
+    width: 100%;
+    
+}  
+//展開sidebar
+.sidebar-toggled {
+    .sidebar{
+        margin-left: 0;
+    }
+    .main {
+        margin-left: $sidebar-width;
+    }
+}
+
+//桌面板(up)
+@include media-breakpoint-up(lg) {
+    .sidebar{
+        margin-left: 0;
+        width: $sidebar-width;
+    }   
+    .main{
+        width: calc(100vw - #{$sidebar-width});//calc()為CSS語法,可使用不同單位的運算
+        margin-left: $sidebar-width;
+        transition: margin-left .25s;
+    }  
+
+//展開sidebar
+    .sidebar-toggled{
+        .sidebar{
+            margin-left: -$sidebar-width;
+         }
+    .main {
+        width: 100%;
+        margin-left: 0;
+        }
+    }
+
+}
+

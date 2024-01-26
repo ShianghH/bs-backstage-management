@@ -1,0 +1,13 @@
+//theme-color
+$pink:rgb(237, 122, 122);
+
+
+.theme-pink{
+    color: $pink;
+    border: 1px solid $pink;
+    &:hover{
+        color: white;
+        background-color: $pink;
+    }
+}
+
