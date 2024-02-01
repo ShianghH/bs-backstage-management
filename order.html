@@ -23,11 +23,10 @@
                         </div>
                     </a>
                 </div>
-
             <!-- 子選單 -->
                 <!-- 訂單管理 -->
-                <div>
-                    <a href="#menu-order" class="sidebar-link" data-bs-toggle="collapse">
+                <nav class="flex-column">
+                    <a class="sidebar-link" href="#menu-order" data-bs-toggle="collapse">
                         <div class="d-flex justify-content-between align-items-center px-4">
                             <div class="d-flex align-items-center">
                                 <i class="bi bi-card-checklist me-2"></i>
@@ -36,70 +35,66 @@
                             <i class="bi bi-caret-down"></i>
                         </div>
                     </a>
-                    <!-- 我的銷售 -->
-                    <div class="collapse" id="menu-order" >
-                        <a href="#seller-orderstatus" class="sidebar-link" data-bs-toggle="collapse">
-                            <div class="ps-5 d-flex align-items-center">
-                                <i class="bi bi-caret-right-fill me-2"></i>
-                                <p class="mb-0"">我的銷售</p>
-                            </div>
-                        </a>
-                        <!-- 我的銷售子層 -->
-                        <div class="collapse" id="seller-orderstatus">
-                            <a href="./orders.html" class="sidebar-link ps-8">尚未付款</a>
-                            <a href="#" class="sidebar-link ps-8">待出貨</a>
-                            <a href="#" class="sidebar-link ps-8">運送中</a>
-                            <a href="#" class="sidebar-link ps-8">已完成</a>
+                <!-- 我的銷售     -->
+                <div class="collapse" id="menu-order" >
+                    <a href="#seller-orderstatus" class="sidebar-link" data-bs-toggle="collapse">
+                        <div class="ps-5 d-flex align-items-center">
+                            <i class="bi bi-caret-right-fill me-2"></i>
+                            <p class="mb-0"">我的銷售</p>
                         </div>
-                        
-                        <!-- 退款退貨 -->
-                        <a href="#buyer-orderstatus" class="sidebar-link" data-bs-toggle="collapse" >
-                            <div class="ps-5 d-flex align-items-center">
-                                <i class="bi bi-caret-right-fill me-2"></i>
-                                <p class="mb-0">退款/退貨</p>
-                            </div>
-                        </a>
-                        <!-- 退款退貨子層 -->
-                        <div class="collapse" id="buyer-orderstatus">
-                            <a href="#" class="sidebar-link ps-8">審核中</a>
-                            <a href="#" class="sidebar-link ps-8">待回復</a>
-                            <a href="#" class="sidebar-link ps-8">已回復</a>
-                            <a href="#" class="sidebar-link ps-8">已完成</a>
-                        </div>
+                    </a>
+                    <!-- 我的銷售子層 -->
+                    <div class="collapse" id="seller-orderstatus">
+                        <a href="./orders.html" class="sidebar-link ps-8">尚未付款</a>
+                        <a href="#" class="sidebar-link ps-8">待出貨</a>
+                        <a href="#" class="sidebar-link ps-8">運送中</a>
+                        <a href="#" class="sidebar-link ps-8">已完成</a>
                     </div>
-                </div> 
+                    
+                    <!-- 退款退貨 -->
+                    <a href="#buyer-orderstatus" class="sidebar-link" data-bs-toggle="collapse" >
+                        <div class="ps-5 d-flex align-items-center">
+                            <i class="bi bi-caret-right-fill me-2"></i>
+                            <p class="mb-0">退款/退貨</p>
+                        </div>
+                    </a>
+                    <!-- 退款退貨子層 -->
+                    <div class="collapse" id="buyer-orderstatus">
+                        <a href="#" class="sidebar-link ps-8">審核中</a>
+                        <a href="#" class="sidebar-link ps-8">待回復</a>
+                        <a href="#" class="sidebar-link ps-8">已回復</a>
+                        <a href="#" class="sidebar-link ps-8">已完成</a>
+                    </div>
+                </div>
 
                 <!-- 賣場管理 -->
-                <div>
-                    <a href="#menu-mystore" class="sidebar-link"  data-bs-toggle="collapse">
+                    <a class="sidebar-link" href="#menu-mystore" data-bs-toggle="collapse">
                         <div class="d-flex justify-content-between px-4">
                             <div class="d-flex align-items-center">
                                 <i class="bi bi-shop me-2"></i>
                                 <p class="mb-0">賣場管理</p>
                             </div>
-                            
                             <i class="bi bi-caret-down"></i>
                         </div>
                     </a>
-                    <div class="collapse" id="menu-mystore">
-                        <a href="./order.html" class="sidebar-link">
-                            <div class="ps-5">我的賣場</div>
-                        </a>
-                        <a href="#" class="sidebar-link">
-                            <div class="ps-5">新增賣場</div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 幫助中心 -->
-                <div>
+                <!-- 賣場管理子層 -->
+                <div class="collapse" id="menu-mystore">
+                    <a href="./order.html" class="sidebar-link">
+                        <div class="ps-5">我的賣場</div>
+                    </a>
                     <a href="#" class="sidebar-link">
+                        <div class="ps-5">新增賣場</div>
+                    </a>
+                </div>
+                <!-- 幫助中心 -->    
+                    <a class="sidebar-link" href="#">
                         <div class="d-flex align-items-center px-4">
                             <i class="bi bi-question-circle me-2"></i>
                             <p class="mb-0">幫助中心</p>
                         </div>
                     </a>
-                </div>                
+
+                </nav>
             </div>
             <!-- 登出按鈕 -->
             <a href="#" class="mt-auto sidebar-link active">
